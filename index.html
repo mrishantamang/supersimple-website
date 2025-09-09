@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+   
+
+    <title>Document</title>
+    <style>
+  /* Suggestion box styles */
+  .suggestion-box {
+    position: absolute;
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    width: 220px;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    font-family: 'Segoe UI', sans-serif;
+    border-radius: 11px;
+    box-shadow: 0px 2px 4px 2px rgb(0, 0, 0);
+  }
+
+  .suggestion-box.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .suggestion-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    width: max-content;
+  }
+  .suggestion-item:hover::after {
+    content: '';
+    background-image: linear-gradient(to right, rgb(0, 64, 255), rgb(0, 255, 255));
+    border-radius: 100px;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+  }
+  .suggestion-item:hover {
+    background-color: #f0f4ff;
+    color: rgb(0, 229, 255);
+    width: fit-content;
+  }
+/* General input styles (no width) */
+input[type="text"] {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  font-size: 16px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ONLY navbar search input has width 120px */
+nav ul li input {
+  width: 140px;
+  background-color: rgb(177, 219, 236);
+
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <h2 class="logo">ANIME.HUD</h2>
+        <nav>
+            <ul>
+                <li><input type="text" placeholder="Search Anime... "></li>
+                <li><a href=""><i class="fas fa-magnifying-glass" id="Searchicon"></i></a></li>
+                <li><a href=""><i class="fas fa-circle-user" id="person"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+      <div class="all">
+       <div class="imageforknow"></div>
+       <div id="text">Issue Recently updated</div>
+       <br>
+       <div class="videoimage">
+        <div class="animelogo1">
+        <a href="pageofdemonslayer.html"><div class="Demonslayer"></div>Demon Slayer</a>
+        <a href=""><div class="bluelock"></div>Blue Lock</a>
+         </div>
+         <div class="animelogo2">
+        <a href=""><div class="flower"></div>The Fragrant Flower</a>
+        <a href=""><div class="TokyoRevengers"></div>Tokyo Revengers</a>
+         </div>
+         <div class="animelogo3">
+        <a href=""><div class="ClassroomoftheElite"></div>Classroom of the Elite</a>
+        <a href=""><div class="OnePunchMan"></div>One-Punch Man</a>
+        </div>
+       </div>
+       </div>
+    </main>
+    <footer>
+<h2 class="logo2">I S H A N</h2>
+<pre>       Anime is everythings in this world <br>
+     You can contract me to new the update
+</pre>
+<div class="icons">
+<nav>
+<ul>
+    <li><a href=""><i class="fa-brands fa-tiktok" ></i></a></li>
+    <li><a href=""><i class="fa-brands fa-facebook-f" ></i></a></li>
+    <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+    <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+</ul>
+</nav>
+</div>
+</footer>
+</body>
+
+
+<script>
+  window.onload = function () {
+    const animes = [
+      { name: "Demon Slayer", url: "pageofdemonslayer.html" },
+      { name: "Blue Lock", url: "#" },
+      { name: "The Fragrant Flower", url: "#" },
+      { name: "Tokyo Revengers", url: "#" },
+      { name: "Classroom of the Elite", url: "#" },
+      { name: "One-Punch Man", url: "#" },
+    ];
+
+    const input = document.querySelector('input[type="text"]');
+    const searchIcon = document.getElementById("Searchicon");
+
+    // Create and style the suggestion box
+    const suggestionBox = document.createElement("div");
+    suggestionBox.className = "suggestion-box";
+    document.body.appendChild(suggestionBox);
+
+    // Position the suggestion box below the input
+    function positionSuggestionBox() {
+      const rect = input.getBoundingClientRect();
+      suggestionBox.style.left = rect.left + "px";
+      suggestionBox.style.top = rect.bottom + window.scrollY + "px";
+    }
+
+    input.addEventListener("input", () => {
+      const value = input.value.toLowerCase().trim();
+      positionSuggestionBox();
+      suggestionBox.innerHTML = "";
+
+      if (value === "") {
+        suggestionBox.classList.remove("show");
+        return;
+      }
+
+      const matches = animes.filter(anime =>
+        anime.name.toLowerCase().includes(value)
+      );
+
+      if (matches.length === 0) {
+        suggestionBox.classList.remove("show");
+        return;
+      }
+
+      matches.forEach(anime => {
+        const div = document.createElement("div");
+        div.textContent = anime.name;
+        div.className = "suggestion-item";
+        div.addEventListener("click", () => {
+          window.location.href = anime.url;
+        });
+        suggestionBox.appendChild(div);
+      });
+
+      suggestionBox.classList.add("show");
+    });
+
+    // Hide suggestions when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!suggestionBox.contains(e.target) && e.target !== input) {
+        suggestionBox.classList.remove("show");
+      }
+    });
+
+    // Handle search icon click
+    searchIcon.addEventListener("click", (e) => {
+      e.preventDefault();
+      const value = input.value.toLowerCase().trim();
+      const match = animes.find(anime =>
+        anime.name.toLowerCase() === value
+      );
+      if (match) {
+        window.location.href = match.url;
+      } else {
+        alert(" Hi! I’m Ishan Tamang, creator of this page.\nThis site is made with love for anime fans.\nEnjoy exploring your favorite shows!");
+      }
+    });
+  };
+</script>
+
+</html>

@@ -1,0 +1,231 @@
+@media screen and (min-width: 320px) and (max-width: 767px) {
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    height: auto;
+    background-color: black;
+    overflow-x: hidden;
+  }
+  header {
+    padding: 10px;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 50px;
+    z-index: 3;
+  }
+  .logo {
+    color: white;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 3s;
+    animation: logo infinite 4s;
+    padding: 4px 0 0 4px;
+  }
+  @keyframes logo {
+    from { color: rgb(216, 216, 216); }
+    to   { color: rgb(0, 204, 255); }
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  nav ul li {
+    padding-left: 10px;
+    position: relative;
+    bottom: 23px;
+  }
+  nav ul li a i {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  nav ul li input {
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    background-color: rgba(176, 176, 176, 0.922);
+    padding-left: 10px;
+    height: 25px;
+  }
+  #Searchicon {
+    color: white;
+    position: fixed;
+    right: 200px;
+    padding-top: 4px;
+  }
+  #person {
+    color: aqua;
+    font-size: 20px;
+    position: relative;
+    top: 4px;
+    right: 10px;
+  }
+
+  .text {
+    width: 100%;
+    height: 30cm;
+    background-color: rgb(0, 0, 0);
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .option {
+    height: auto;
+    width: 100%;
+    margin-top: 10px;
+    background-color: black;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 8px;
+  }
+
+  .option button {
+    width: 65px;
+    height: 28px;
+    background-color: rgba(139, 135, 135, 0.546);
+    font-size: 12px;
+  }
+  .watch {
+    color: aliceblue;
+    width: 95%;
+    background-color: rgba(139, 135, 135, 0.546);
+    margin: 10px auto;
+    height: auto;
+    padding: 10px;
+  }
+
+  .watch h4 {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .first6 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+
+  .first11 {
+    padding-top: 2px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    flex-wrap: wrap;
+   
+  }
+
+  .all {
+    height: 23cm;
+    background-color: rgba(255, 255, 255, 0.219);
+    margin-top: 30px;
+    padding: 10px;
+  }
+
+  .img {
+    padding-left: 3px;
+    position: relative;
+    bottom: 90px;
+    right: 6px;
+    width: 150px;
+    max-width: 100%;
+  }
+
+  #name {
+    color: white;
+    font-size: 14px;
+    position: relative;
+    left: 155px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  p {
+    color: rgba(240, 248, 255, 0.797);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    bottom: 85px;
+    font-size: 14px;
+  }
+
+  #name2 {
+    color: rgba(255, 255, 255, 0.587);
+    font-size: 14px;
+    position: relative;
+     left: 155px;
+    top: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  footer {
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 30px;
+  }
+
+  .logo2 {
+    color: white;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: logo2 infinite 10s;
+    transition: all 5s;
+    padding-bottom: 20px;
+  }
+  @keyframes logo2 {
+    from { color: white; }
+    to   { color: red; }
+  }
+
+  .icons {
+    background-color: black;
+    margin-top: 55px;
+  
+  }
+
+  .icons nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+
+  .icons nav ul li {
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    margin: 0 10px;
+    width: 40px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: black;
+    text-align: center;
+    box-shadow: 0px 1px 6px 2px white;
+  
+  }
+
+  .icons nav ul li a i {
+    color: white;
+    font-size: 18px;
+    line-height: 25px;
+    position: relative;
+    right: 5px;
+  }
+
+  pre {
+    color: rgba(255, 255, 255, 0.479);
+    font-family: 'Lucida Sans', 'Lucida Grande', sans-serif;
+    font-size: 13px;
+    text-align: center;
+    padding-right: 20px;
+  }
+}

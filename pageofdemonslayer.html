@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="pageofdemonslayer.Css">
+     <style>
+  /* Suggestion box styles */
+  .suggestion-box {
+    position: absolute;
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    width: 220px;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    font-family: 'Segoe UI', sans-serif;
+    border-radius: 11px;
+    box-shadow: 0px 2px 4px 2px rgb(0, 0, 0);
+  }
+
+  .suggestion-box.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .suggestion-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    width: max-content;
+  }
+  .suggestion-item:hover::after {
+    content: '';
+    background-image: linear-gradient(to right, rgb(0, 64, 255), rgb(0, 255, 255));
+    border-radius: 100px;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+  }
+  .suggestion-item:hover {
+    background-color: #f0f4ff;
+    color: rgb(0, 229, 255);
+    width: fit-content;
+  }
+/* General input styles (no width) */
+input[type="text"] {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  font-size: 16px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ONLY navbar search input has width 120px */
+nav ul li input {
+  width: 140px;
+  background-color: rgb(177, 219, 236);
+
+}
+</style>
+</head>
+<body>
+<header>
+        <h2 class="logo">ANIME.HUD</h2>
+        <nav>
+            <ul>
+                <li><input type="text" placeholder="Search Anime... "></li>
+                <li><a href=""><i class="fas fa-magnifying-glass" id="Searchicon"></i></a></li>
+                <li><a href=""><i class="fas fa-circle-user" id="person"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <br><br><br>
+        <div class="animelogo"></div>
+        <div class="Text">Demon Slayer: Kimetsu No Yaiba <br>The Hashira Training art</div>
+        <br><br>
+        <div class="videoplace">
+           <div class="Episode1" onclick="Episode1()">Episode1</div>
+            <div class="Episode2" onclick="Episode2()">Episode2</div>
+            <div class="Episode3" onclick="Episode3()">Episode3</div>
+            <div class="Episode4" onclick="Episode4()">Episode4</div>
+            <div class="Episode5" onclick="Episode5()">Episode5</div>
+            <div class="Episode6" onclick="Episode6()">Episode6</div>
+            <div class="Episode7" onclick="Episode7()">Episode7</div>
+            <div class="Episode8" onclick="Episode8()">Episode8</div>
+            <div class="Episode9" onclick="Episode9()">Episode9</div>
+            <div class="Episode10" onclick="Episode10()">Episode10</div>
+            <div class="Episode11" onclick="Episode11()">Episode11</div>
+        </div>
+    </main>
+    <footer>
+<h2 class="logo2">I S H A N</h2>
+<pre>Anime is everythings in this world <br>
+       You can contract me to new the update
+</pre>
+<div class="icons">
+<nav>
+<ul>
+    <li><a href=""><i class="fa-brands fa-tiktok" ></i></a></li>
+    <li><a href=""><i class="fa-brands fa-facebook-f" ></i></a></li>
+    <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+    <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+</ul>
+</nav>
+</div>
+</footer>
+</body>
+<script>
+    function Episode1() {
+    const element = document.getElementsByClassName('Episode1')[1];
+      window.location.href = 'pageofdemonslayervideo1.html';
+  }
+  function Episode2() {
+    const element = document.getElementsByClassName('Episode2')[2];
+      window.location.href = 'pageofdemonslayervideo2.html';
+  }
+  function Episode3() {
+    const element = document.getElementsByClassName('Episode3')[3];
+      window.location.href = 'pageofdemonslayervideo3.html';
+  }
+  function Episode4() {
+    const element = document.getElementsByClassName('Episode4')[4];
+      window.location.href = 'pageofdemonslayervideo4.html';
+  }
+  function Episode5() {
+    const element = document.getElementsByClassName('Episode5')[5];
+      window.location.href = 'pageofdemonslayervideo5.html';
+  }
+  function Episode6() {
+    const element = document.getElementsByClassName('Episode6')[6];
+      window.location.href = 'pageofdemonslayervideo6.html';
+  }
+  function Episode7() {
+    const element = document.getElementsByClassName('Episode7')[7];
+      window.location.href = 'pageofdemonslayervideo7.html';
+  }
+  function Episode8() {
+    const element = document.getElementsByClassName('Episode8')[8];
+      window.location.href = 'pageofdemonslayervideo8.html';
+  }
+  function Episode9() {
+    const element = document.getElementsByClassName('Episode9')[9];
+      window.location.href = 'pageofdemonslayervideo9.html';
+  }
+  function Episode10() {
+    const element = document.getElementsByClassName('Episode10')[10];
+      window.location.href = 'pageofdemonslayervideo10.html';
+  }
+  function Episode11() {
+    const element = document.getElementsByClassName('Episode11')[11];
+      window.location.href = 'pageofdemonslayervideo11.html';
+  }
+  window.onload = function () {
+    const animes = [
+      { name: "Demon Slayer", url: "pageofdemonslayer.html" },
+      { name: "Blue Lock", url: "#" },
+      { name: "The Fragrant Flower", url: "#" },
+      { name: "Tokyo Revengers", url: "#" },
+      { name: "Classroom of the Elite", url: "#" },
+      { name: "One-Punch Man", url: "#" },
+    ];
+
+    const input = document.querySelector('input[type="text"]');
+    const searchIcon = document.getElementById("Searchicon");
+
+    // Create and style the suggestion box
+    const suggestionBox = document.createElement("div");
+    suggestionBox.className = "suggestion-box";
+    document.body.appendChild(suggestionBox);
+
+    // Position the suggestion box below the input
+    function positionSuggestionBox() {
+      const rect = input.getBoundingClientRect();
+      suggestionBox.style.left = rect.left + "px";
+      suggestionBox.style.top = rect.bottom + window.scrollY + "px";
+    }
+
+    input.addEventListener("input", () => {
+      const value = input.value.toLowerCase().trim();
+      positionSuggestionBox();
+      suggestionBox.innerHTML = "";
+
+      if (value === "") {
+        suggestionBox.classList.remove("show");
+        return;
+      }
+
+      const matches = animes.filter(anime =>
+        anime.name.toLowerCase().includes(value)
+      );
+
+      if (matches.length === 0) {
+        suggestionBox.classList.remove("show");
+        return;
+      }
+
+      matches.forEach(anime => {
+        const div = document.createElement("div");
+        div.textContent = anime.name;
+        div.className = "suggestion-item";
+        div.addEventListener("click", () => {
+          window.location.href = anime.url;
+        });
+        suggestionBox.appendChild(div);
+      });
+
+      suggestionBox.classList.add("show");
+    });
+
+    // Hide suggestions when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!suggestionBox.contains(e.target) && e.target !== input) {
+        suggestionBox.classList.remove("show");
+      }
+    });
+
+    // Handle search icon click
+    searchIcon.addEventListener("click", (e) => {
+      e.preventDefault();
+      const value = input.value.toLowerCase().trim();
+      const match = animes.find(anime =>
+        anime.name.toLowerCase() === value
+      );
+      if (match) {
+        window.location.href = match.url;
+      } else {
+        alert(" Hi! I’m Ishan Tamang, creator of this page.\nThis site is made with love for anime fans.\nEnjoy exploring your favorite shows!");
+      }
+    });
+  };
+</script>
+</html>
