@@ -126,7 +126,7 @@
   }
 
   .all {
-    height: 23cm;
+    height: 30cm;
     background-color: rgba(255, 255, 255, 0.219);
     margin-top: 30px;
     padding: 10px;
@@ -134,9 +134,6 @@
 
   .img {
     padding-left: 3px;
-    position: relative;
-    bottom: 90px;
-    right: 6px;
     width: 150px;
     max-width: 100%;
   }
@@ -144,25 +141,26 @@
   #name {
     color: white;
     font-size: 14px;
+    padding-left: 160px;
     position: relative;
-    left: 155px;
+    bottom: 204px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   p {
     color: rgba(240, 248, 255, 0.797);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative;
-    bottom: 85px;
     font-size: 14px;
+    position: relative;
+    bottom: 110px;
   }
 
   #name2 {
     color: rgba(255, 255, 255, 0.587);
     font-size: 14px;
+   padding-left: 160px;
     position: relative;
-     left: 155px;
-    top: 15px;
+    bottom: 190px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
@@ -172,7 +170,7 @@
     border-radius: 10px;
     text-align: center;
     padding: 20px 10px;
-    margin-top: 30px;
+    margin-top: 265px;
   }
 
   .logo2 {
